@@ -23,7 +23,6 @@ In order to understand the relationships between the tables, and help assign pri
 <p align="center">
 Employee ERD
 </p>
-<br />
 
 ### Retirement Titles 
 
@@ -112,7 +111,7 @@ ORDER BY employees.emp_no;
 ```
 <br />
 <p align="center">
-<img src="Data/mentorship_eligibility.png" width="300">
+<img src="Data/mentorship_eligibility.png" width="800">
 </p>
 <p align="center">
 Employee Mentorship Programme Eligibility
