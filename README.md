@@ -128,6 +128,9 @@ FROM mentorship_eligibity
 GROUP BY mentorship_eligibity.title
 ORDER BY COUNT DESC;
 ```
+
+Using the code above, it is determined the job role with the largest number of emloyees eligible for this programme is Senior Staff, with 633 employees. This is in comparrison to Technique Leaders, who have the smalled number of employees eligible with 99 employees. 
+
 <br />
 <p align="center">
 <img src="Data/mentorship_titles.png" width="300">
@@ -136,5 +139,3 @@ ORDER BY COUNT DESC;
 Employee Mentorship Programme Eligibility by Titles
 </p>
 <br />
-
-Using the code above, it is determined the job role with the largest number of emloyees eligible for this programme is Senior Staff, with 633 employees. This is in comparrison to Technique Leaders, who have the smalled number of employees eligible with 99 employees. 
