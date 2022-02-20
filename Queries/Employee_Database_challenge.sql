@@ -60,3 +60,12 @@ WHERE (employees.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 ORDER BY employees.emp_no;
 
 SELECT * FROM mentorship_eligibity;
+
+-- Summary (Mentorship Titles)
+SELECT COUNT(mentorship_eligibity.emp_no), mentorship_eligibity.title
+INTO mentorship_titles
+FROM mentorship_eligibity
+GROUP BY mentorship_eligibity.title
+ORDER BY COUNT DESC;
+
+SELECT * FROM mentorship_titles
