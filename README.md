@@ -110,14 +110,30 @@ ON (employees.emp_no = titles.emp_no)
 WHERE (employees.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 ORDER BY employees.emp_no;
 ```
+<br />
+<p align="center">
+<img src="Data/mentorship_eligibility.png" width="300">
+</p>
+<p align="center">
+Employee Mentorship Programme Eligibility
+</p>
+<br />
+
+
 Here we created a new table called mentorship_eligibilty by using the DISTINCT ON function from the data retrieved from three other tables. It can be determined from the code above that there are 1940 employees who are eligible for the mentorship programme. 
 
 ---
 ## Summary 
 
-In conclusion, it can be determined that:
-1. There are 72,458 employees due to retire
-2. There are 1,940 employees that are eligible for the mentoriship programme. 
+The aim of the paper was to retrieve the number of retiring employees by title and the employees eligible for the mentorship programme. In conclusion, it can be determined that:
+1. There are 72,458 roles that will be need to be filled as the "silver tsunami" begins to make and impact. 
+2. There are only 1,940 employees that are eligible for the mentoriship programme. 
+
+Additional Insights:
+- Of the 72,458 employees due to retire, 70% are either Senior Engineers or Senior Staff 
+- Only 2 managers are due to retire 
+- Only 2.7% of those employees that are due to retire are eligble for the mentorship programme
+- There are no managers eligble for the mentorship programme.
 
 In addition to finding out which employees are eligible for the mentorship programme, it would helpful to find out how many employees from each job role are eligible. This would be beneficial in helping distribute mentors to the correct department, as well as finding out whether support is needed in other areas. 
 
