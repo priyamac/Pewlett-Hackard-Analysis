@@ -63,7 +63,7 @@ WHERE (to_date = '9999-01-01')
 ORDER BY emp_no, title DESC;
 ```
 
-Using a DISTINCT ON statement to retrieve the first occurrence of the employee number for each set of rows, and a WHERE statement to keep only those dates that are equal to 01/01/199, a table can be created to display all the unique values of employees that are set to retire. 
+Using a DISTINCT ON statement to retrieve the first occurrence of the employee number for each set of rows, and a WHERE statement to keep only those dates that are equal to 01/01/1999, a table can be created to display all the unique values of employees that are set to retire. 
 
 The table is now pulling back 72,458 rows. 
 
@@ -87,6 +87,7 @@ Retiring Count by Titles
 </p>
 <br />
 
+This shows the 72,458 employees that are due to retire, broken up by titles. The role with the largest number of employees due to retire are senior engineers, with 25,916 people due to retire, and the role with the least number of employees due to retire are managers, with just 2 emloyees. 
 
 ### Mentorship Eligibility 
 
@@ -114,4 +115,26 @@ Here we created a new table called mentorship_eligibilty by using the DISTINCT O
 ---
 ## Summary 
 
+In conclusion, it can be determined that:
+1. There are 72,458 employees due to retire
+2. There are 1,940 employees that are eligible for the mentoriship programme. 
 
+In addition to finding out which employees are eligible for the mentorship programme, it would helpful to find out how many employees from each job role are eligible. This would be beneficial in helping distribute mentors to the correct department, as well as finding out whether support is needed in other areas. 
+
+``` sql 
+SELECT COUNT(mentorship_eligibity.emp_no), mentorship_eligibity.title
+INTO mentorship_titles
+FROM mentorship_eligibity
+GROUP BY mentorship_eligibity.title
+ORDER BY COUNT DESC;
+```
+<br />
+<p align="center">
+<img src="Data/mentorship_titles.png" width="300">
+</p>
+<p align="center">
+Employee Mentorship Programme Eligibility by Titles
+</p>
+<br />
+
+Using the code above, it is determined the job role with the largest number of emloyees eligible for this programme is Senior Staff, with 633 employees. This is in comparrison to Technique Leaders, who have the smalled number of employees eligible with 99 employees. 
